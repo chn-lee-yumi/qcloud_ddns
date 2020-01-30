@@ -2,10 +2,10 @@
 
 腾讯云域名DDNS的python2脚本，可以在群晖上使用
 
-群晖使用方式：
+群晖使用方式：crontab，以我的机器为例，脚本（即本仓库的`qcloud.py`）保存在`/root/ddns.py`，然后修改`/etc/crontab`，在末尾加入一行`*/5   *   *   *   *   root    /bin/python /root/ddns.py >> /root/ddns.log`
 
 ```shell
-root@CloudStation:~# cat /etc/crontab 
+root@CloudStation:~# cat /etc/crontab
 MAILTO=""
 PATH=/sbin:/bin:/usr/sbin:/usr/bin:/usr/syno/sbin:/usr/syno/bin:/usr/local/sbin:/usr/local/bin
 #minute	hour	mday	month	wday	who	command
